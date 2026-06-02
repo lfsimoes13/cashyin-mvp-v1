@@ -1,0 +1,13 @@
+{
+  "name": "integration-mvp-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Orquestrador do Monorrepósio (Frontend TanStack Start + Backend Fastify)",
+  "scripts": {
+    "install:all": "npm install && npx pnpm install --dir cashyin-core-api-main && npm install --prefix cashin-frontend",
+    "dev": "npx concurrently --kill-others --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npx pnpm --dir cashyin-core-api-main dev\" \"npm run dev --prefix cashin-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
